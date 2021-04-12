@@ -1,6 +1,6 @@
 #ifndef CORE_H
 #define CORE_H
-
+// declara las funciones que el main usa
 void init_pos(double* rxyz, const double rho);
 void init_vel(double* vxyz, double* temp, double* ekin);
 void forces(const double* rxyz, double* fxyz, double* epot, double* pres,

@@ -9,12 +9,13 @@ void init_pos(double* rxyz, const double rho)
     // inicialización de las posiciones de los átomos en un cristal FCC
 
     double a = cbrt(4.0 / rho);
-    int nucells = ceil(cbrt((double)N / 4.0));
+    int nucells = ceil(cbrt((double)N / 4.0)); //cbrt es cubic root, ceil(x) vuelve int a x
     int idx = 0;
 
     for (int i = 0; i < nucells; i++) {
         for (int j = 0; j < nucells; j++) {
             for (int k = 0; k < nucells; k++) {
+		// son 4 porque son 4 direcc. de vectores red para FCC
                 rxyz[idx + 0] = i * a; // x
                 rxyz[idx + 1] = j * a; // y
                 rxyz[idx + 2] = k * a; // z
@@ -44,6 +45,7 @@ void init_vel(double* vxyz, double* temp, double* ekin)
 
     double sf, sumvx = 0.0, sumvy = 0.0, sumvz = 0.0, sumv2 = 0.0;
 
+    // un solo arreglo con todas las velocidades
     for (int i = 0; i < 3 * N; i += 3) {
         vxyz[i + 0] = rand() / (double)RAND_MAX - 0.5;
         vxyz[i + 1] = rand() / (double)RAND_MAX - 0.5;
