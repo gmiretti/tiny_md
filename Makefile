@@ -1,11 +1,11 @@
 CC      = gcc
 CFLAGS	= -O0
-WFLAGS	= -std=gnu11 -Wall -Wextra -g
+WFLAGS	= -std=c11 -Wall -Wextra -g
 LDFLAGS	= -lm
 
 TARGETS	= tiny_md viz
 SOURCES	= $(shell echo *.c)
-OBJECTS = core.o
+OBJECTS = core.o wtime.o
 
 all: $(TARGETS)
 
