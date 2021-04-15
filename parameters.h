@@ -31,7 +31,7 @@
 #define RCUT 2.5
 #endif
 
-#ifndef DT // paso temporal ~ 1.6 fs para el Ar
+#ifndef DT // paso temporal ~ 1.6 fs para el Ar -> ¿?
 #define DT 0.005
 #endif
 

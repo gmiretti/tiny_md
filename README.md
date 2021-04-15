@@ -23,7 +23,19 @@ donde `make clean` elimina los objetos compilados anteriormente y `make` compila
 >
 > _Si se desean cambiar parámetros de entrada de la simulación, puede modificarse el archivo _`parameters.h`_ o pasar los valores deseados como parámetros al preprocesador C; por ejemplo, _`make CPPFLAGS="-DN=1372"`_ cambia la cantidad de partículas que se simulan._
 
-
+### Archivos
+*Quizás darle otra ubicación a esta lista*
+* core.c : contiene todas las funciones: calcula posic. y veloc. inic., imagen mínima, fuerzas, PBC, y pasos con Velocity Verlet.
+* core.h : declara funciones usadas por main, core.c, etc.
+* Makefile : para compilar.
+* meson.build : bien gracias.
+* parameters.h : contiene parámetros: nro. partículas, T, densidad, radio de corte, etc.
+* README.md : este archivo.
+* tiny\_md.c : código princ. de la DM.
+* TinyMD.pdf : sobre DM y algoritmos usados en el programa.
+* viz.c : como `tiny\_md.c` con visualización simultánea.
+* wtime.c : revisar: sobre calcular t sim.
+* wtime.h : `#pragma once`
 ### Contacto
 
 Por errores, preguntas o sugerencias contactarse con:
