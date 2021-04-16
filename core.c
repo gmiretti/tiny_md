@@ -4,7 +4,7 @@
 #include <math.h>
 #include <stdlib.h> // rand()
 
-#define ECUT (4.0 * (pow(RCUT, -12) - pow(RCUT, -6)))
+#define ECUT (4.0 * (pow(RCUT, -12) - pow(RCUT, -6))) 
 
 
 void init_pos(double* rxyz, const double rho)
@@ -18,7 +18,7 @@ void init_pos(double* rxyz, const double rho)
     for (int i = 0; i < nucells; i++) {
         for (int j = 0; j < nucells; j++) {
             for (int k = 0; k < nucells; k++) {
-		// son 4 porque son 4 direcc. de vectores red para FCC
+		// 4 calculos de ryxz porque son 4 direcc. de vectores red para FCC
                 rxyz[idx + 0] = i * a; // x
                 rxyz[idx + 1] = j * a; // y
                 rxyz[idx + 2] = k * a; // z
@@ -79,7 +79,8 @@ void init_vel(double* vxyz, double* temp, double* ekin)
 
 static double minimum_image(double cordi, const double cell_length)
 {
-    // imagen más cercana
+    // imagen más cercana-esto le dice estilo que si la caja de sim. va de 0 a cell_length, 
+    // con este cálculo veo qué partículas considera como dentro de la celda de una partíc. (ver 1.1.2 TinyMD.pdf)
 
     if (cordi <= -0.5 * cell_length) {
         cordi += cell_length;
@@ -124,6 +125,7 @@ void forces(const double* rxyz, double* fxyz, double* epot, double* pres,
 
             double rij2 = rx * rx + ry * ry + rz * rz;
 
+	    // con esto se fija si está dentro del radio de corte. (con módulo de cada vector posic.)
             if (rij2 <= rcut2) {
                 double r2inv = 1.0 / rij2;
                 double r6inv = r2inv * r2inv * r2inv;
