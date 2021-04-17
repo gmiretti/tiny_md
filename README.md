@@ -109,6 +109,7 @@ donde `make clean` elimina los objetos compilados anteriormente y `make` compila
 * viz.c : como `tiny\_md.c` con visualización simultánea.
 * wtime.c : revisar: sobre calcular t sim.
 * wtime.h : `#pragma once`
+
 ### Contacto
 
 Por errores, preguntas o sugerencias contactarse con autor original :D
