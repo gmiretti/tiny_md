@@ -22,7 +22,7 @@ int main()
     rxyz = (double*)malloc(3 * N * sizeof(double));
     vxyz = (double*)malloc(3 * N * sizeof(double));
     fxyz = (double*)malloc(3 * N * sizeof(double));
-    // imprime en pantalla-tal vez comentar
+    // imprime en pantalla-tal vez comentar y ver de qué otra forma anotar esto sino
     printf("# Número de partículas:      %d\n", N);
     printf("# Temperatura de referencia: %.2f\n", T0);
     printf("# Pasos de equilibración:    %d\n", TEQ);
@@ -37,7 +37,11 @@ int main()
     Rho = RHOI;				// RHOI es densidad inicial
     init_pos(rxyz, Rho);		// inicializa posiciones
     double start = wtime();		// para llevar cuenta del tiempo de corrida
-    for (int m = 0; m < 9; m++) {
+    double T_control = 0.0, T_diff = 0.0;
+    int m = 0; // ¿alguna forma de que ya use esto en el 'for ()'?
+    int pasos;
+
+    for (m = 0; m < 9; m++) {
         Rhob = Rho;
         Rho = RHOI - 0.1 * (double)m;
         cell_V = (double)N / Rho;	// volumen celda
@@ -65,7 +69,7 @@ int main()
         }
 
         int mes = 0;
-        double epotm = 0.0, presm = 0.0;
+        double epotm = 0.0, presm = 0.0; //, T_control = 0.0;
         for (i = TEQ; i < TRUN; i++) { // loop de medicion
 
             velocity_verlet(rxyz, vxyz, fxyz, &Epot, &Ekin, &Pres, &Temp, Rho, cell_V, cell_L);
@@ -75,7 +79,7 @@ int main()
                 vxyz[k] *= sf;
             }
 
-            if (i % TMES == 0) {	// escritura de archivos
+            if (i % TMES == 0) {	// escritura de archivos-más allá de pruebas, en princ. no desactivaría esto porque es crucial del programa
                 Epot += Etail;		// suma factores para ir corrigiendo la E y otras calculadas
                 Pres += Ptail;
 
@@ -89,18 +93,25 @@ int main()
                 for (int k = 0; k < 3 * N; k += 3) {
                     fprintf(file_xyz, "Ar %e %e %e\n", rxyz[k + 0], rxyz[k + 1], rxyz[k + 2]);
                 }
+		
             }
 
             t += DT;
+	    T_control += Temp;  // para poner T como test programa
         }
-        printf("%f\t%f\t%f\t%f\n", Rho, cell_V, epotm / (double)mes, presm / (double)mes);
-    }
-    // poner T como parámetro
 
+        printf("%f\t%f\t%f\t%f\n", Rho, cell_V, epotm / (double)mes, presm / (double)mes);
+	
+    } 
+
+    pasos = (TRUN - TEQ) * m; // totales de sim. Lo paso como int...
+    T_control = T_control / pasos;    
+    T_diff = (T0 - T_control) * 100.0;                                              
+    printf("# Diferencia en T = %f porcentaje\n", T_diff);                          
     double elapsed = wtime() - start;
     printf("# Tiempo total de simulación = %f segundos\n", elapsed);
-    printf("# Tiempo simulado = %f [fs]\n", t * 1.6);
-    printf("# ns/day = %f\n", (1.6e-6 * t) / elapsed * 86400);
+    // printf("# Tiempo simulado = %f [fs]\n", t * 1.6);
+    // printf("# ns/day = %f\n", (1.6e-6 * t) / elapsed * 86400);
     //                       ^1.6 fs -> ns       ^sec -> day
     return 0;
 }
