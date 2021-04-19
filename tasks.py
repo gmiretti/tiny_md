@@ -11,7 +11,7 @@ SRC_DIR = "src"
 LOG_DIR = "log"
 MACHINE_NAME = slugify(platform.node())
 DEFAULT_CC = "gcc"
-DEFAULT_CCS = ["gcc-5", "gcc-10", "icc", "clang-6.0", "clang-12", "nvc"]
+DEFAULT_CCS = ["gcc-5", "gcc-10", "clang-6.0", "clang-12", "icc", "nvc"]
 DEFAULT_CFLAGS = "-O0"
 DEFAULT_LDFLAGS = "-lm"
 DEFAULT_PARAMFLAGS = "-DN256"
@@ -200,6 +200,33 @@ def run_all_ccs(
             wflags,
             ldflags,
             paramflags,
+            solution,
+            measure_options,
+            retries,
+        )
+
+
+@task()
+def run_scaling(
+    c,
+    must_clean=True,
+    cc=DEFAULT_CC,
+    cflags=DEFAULT_CFLAGS,
+    wflags=DEFAULT_WFLAGS,
+    ldflags=DEFAULT_LDFLAGS,
+    solution=DEFAULT_SOLUTION,
+    measure_options=DEFAULT_MEASURE_OPTS,
+    retries=DEFAULT_RETRIES,
+):
+    for n in [16, 64, 256, 512, 1024, 2048]:
+        run(
+            c,
+            must_clean,
+            cc,
+            cflags,
+            wflags,
+            ldflags,
+            f"-DN={n}",
             solution,
             measure_options,
             retries,
