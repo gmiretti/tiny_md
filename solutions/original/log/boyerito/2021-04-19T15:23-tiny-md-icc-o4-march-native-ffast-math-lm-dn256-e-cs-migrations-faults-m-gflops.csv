@@ -1,0 +1,12 @@
+# started on Mon Apr 19 15:24:08 2021
+
+46,,cs,13.87%,6385856646,100.00,,
+0,,migrations,0.00%,6385856646,100.00,,
+101,,faults,0.33%,6385856646,100.00,,
+12,,fp_arith_inst_retired.scalar_single,37.84%,4256557649,66.66,1.5,GFLOPs
+9812449298,,fp_arith_inst_retired.scalar_double,0.02%,4257825799,66.67,,
+0,,fp_arith_inst_retired.128b_packed_double,0.00%,4258179432,66.68,,
+0,,fp_arith_inst_retired.128b_packed_single,0.00%,4258206501,66.68,,
+3445017,,fp_arith_inst_retired.256b_packed_double,0.03%,4257170164,66.66,,
+0,,fp_arith_inst_retired.256b_packed_single,0.00%,4255874945,66.64,,
+6394257783,ns,duration_time,3.35%,6394257783,100.00,,
