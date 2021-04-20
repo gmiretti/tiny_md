@@ -14,7 +14,7 @@ DEFAULT_CC = "gcc"
 DEFAULT_CCS = ["gcc-5", "gcc-10", "clang-6.0", "clang-12", "icc", "nvc"]
 DEFAULT_CFLAGS = "-O0"
 DEFAULT_LDFLAGS = "-lm"
-DEFAULT_PARAMFLAGS = "-DN256"
+DEFAULT_PARAMFLAGS = "-DN=256"
 DEFAULT_WFLAGS = "-std=gnu11 -Wall -Wextra -g"
 CSV_SEPARATOR = ","
 DEFAULT_MEASURE_OPTS = "-e 'cs,migrations,faults' -M 'GFLOPs' "
@@ -58,6 +58,7 @@ def get_log_dir(solution):
 
 
 def get_exec_name(cc, cflags, ldflags, paramflags, name="tiny_md"):
+    cc = cc.replace("-.", '_')
     return slugify_iter(name, cc, cflags, ldflags, paramflags)
 
 
