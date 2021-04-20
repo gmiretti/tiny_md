@@ -219,7 +219,7 @@ def run_scaling(
     measure_options=DEFAULT_MEASURE_OPTS,
     retries=DEFAULT_RETRIES,
 ):
-    for n in [16, 64, 256, 512, 1024, 2048]:
+    for n in [4*(m**3) for m in range(2, 8)]:
         run(
             c,
             must_clean,

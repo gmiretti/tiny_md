@@ -1,0 +1,54 @@
+# Número de partículas:      108
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	90.000000	-138.594514	-nan
+1.100000	98.181818	-127.044971	0.906023
+1.000000	108.000000	-115.495429	0.930598
+0.900000	120.000000	-103.945886	0.933784
+0.800000	135.000000	-92.396343	0.915583
+0.700000	154.285714	-80.846800	0.875993
+0.600000	180.000000	-69.297257	0.815015
+0.500000	216.000000	-57.747714	0.732649
+0.400000	270.000000	-46.198171	0.628896
+# Tiempo total de simulación = 0.310715 segundos
+# Tiempo simulado = 108.000000 [fs]
+# ns/day = 30.031399
+# Número de partículas:      108
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	90.000000	-138.594514	-nan
+1.100000	98.181818	-127.044971	0.906023
+1.000000	108.000000	-115.495429	0.930598
+0.900000	120.000000	-103.945886	0.933784
+0.800000	135.000000	-92.396343	0.915583
+0.700000	154.285714	-80.846800	0.875993
+0.600000	180.000000	-69.297257	0.815015
+0.500000	216.000000	-57.747714	0.732649
+0.400000	270.000000	-46.198171	0.628896
+# Tiempo total de simulación = 0.308197 segundos
+# Tiempo simulado = 108.000000 [fs]
+# ns/day = 30.276753
+# Número de partículas:      108
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	90.000000	-138.594514	-nan
+1.100000	98.181818	-127.044971	0.906023
+1.000000	108.000000	-115.495429	0.930598
+0.900000	120.000000	-103.945886	0.933784
+0.800000	135.000000	-92.396343	0.915583
+0.700000	154.285714	-80.846800	0.875993
+0.600000	180.000000	-69.297257	0.815015
+0.500000	216.000000	-57.747714	0.732649
+0.400000	270.000000	-46.198171	0.628896
+# Tiempo total de simulación = 0.304136 segundos
+# Tiempo simulado = 108.000000 [fs]
+# ns/day = 30.680977
