@@ -1,0 +1,77 @@
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	213.333333	-1404.877746	28.870371
+1.100000	232.727273	-1521.890514	17.662456
+1.000000	256.000000	-1294.246114	15.187919
+0.900000	284.444444	-1285.474910	9.187099
+0.800000	320.000000	-1213.802615	5.346585
+0.700000	365.714286	-1100.983033	3.025517
+^Csolutions/original/bin/boyerito/tiny-md-gcc-5-o0-lm-dn-256: Interrupt
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+^Csolutions/original/bin/boyerito/tiny-md-gcc-5-o0-lm-dn-256: Interrupt
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	213.333333	-1404.883943	28.868348
+1.100000	232.727273	-1519.453770	17.718949
+1.000000	256.000000	-1298.370028	15.115337
+0.900000	284.444444	-1293.628767	9.001143
+0.800000	320.000000	-1217.501041	5.291380
+0.700000	365.714286	-1099.175224	3.060507
+0.600000	426.666667	-962.283376	1.742279
+^Csolutions/original/bin/boyerito/tiny-md-gcc-5-o0-lm-dn-256: Interrupt
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	213.333333	-1407.758806	28.808988
+1.100000	232.727273	-1518.838546	17.725008
+1.000000	256.000000	-1283.932848	15.393220
+0.900000	284.444444	-1293.123732	9.027890
+0.800000	320.000000	-1213.851015	5.352102
+0.700000	365.714286	-1103.209426	3.027934
+0.600000	426.666667	-958.097754	1.768672
+0.500000	512.000000	-803.669246	1.065810
+0.400000	640.000000	-648.042300	0.697631
+# Tiempo total de simulación = 17.705639 segundos
+# Tiempo simulado = 108.000000 [fs]
+# ns/day = 0.527019
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+1.200000	213.333333	-1406.444583	28.843030
+1.100000	232.727273	-1521.150047	17.671006
+1.000000	256.000000	-1308.517405	14.891931
+0.900000	284.444444	-1286.346363	9.138103
+0.800000	320.000000	-1216.822862	5.321992
+0.700000	365.714286	-1104.109524	3.011091
+0.600000	426.666667	-960.465131	1.745813
+0.500000	512.000000	-801.677953	1.076653
+0.400000	640.000000	-649.433113	0.698380
+# Tiempo total de simulación = 17.646025 segundos
+# Tiempo simulado = 108.000000 [fs]
+# ns/day = 0.528799
+# Número de partículas:      256
+# Temperatura de referencia: 2.00
+# Pasos de equilibración:    500
+# Pasos de medición:         1500
+# (mediciones cada 10 pasos)
+# densidad, volumen, energía potencial media, presión media
+^Csolutions/original/bin/boyerito/tiny-md-gcc-5-o0-lm-dn-256: Interrupt
