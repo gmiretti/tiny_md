@@ -16,7 +16,7 @@ tiny_md: tiny_md.o $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c
-	$(CC) $(WFLAGS) $(CPPFLAGS) $(CFLAGS) -c $<
+	$(CC) $(WFLAGS) $(PARAMFLAGS) $(CFLAGS) -c $<
 
 clean:
 	rm -f $(TARGETS) *.o *.xyz *.log .depend
