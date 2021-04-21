@@ -10,7 +10,7 @@ BIN_DIR = "bin"
 SRC_DIR = "src"
 LOG_DIR = "log"
 MACHINE_NAME = slugify(platform.node())
-DEFAULT_CC = "gcc"
+DEFAULT_CC = "gcc-5"
 DEFAULT_CCS = ["gcc-5", "gcc-10", "clang-6.0", "clang-12", "icc", "nvc"]
 DEFAULT_CFLAGS = "-O0"
 DEFAULT_LDFLAGS = "-lm"
@@ -58,8 +58,8 @@ def get_log_dir(solution):
 
 
 def get_exec_name(cc, cflags, ldflags, paramflags, name="tiny_md"):
-    cc = cc.replace("-.", '_')
-    return slugify_iter(name, cc, cflags, ldflags, paramflags)
+    cc = cc.replace("-", '_').replace(".", '_')
+    return f"{slugify(name)}-{cc}-{slugify_iter(cflags, ldflags, paramflags)}"
 
 
 def get_log_prefix(exec_name, start_time=datetime.now()):
