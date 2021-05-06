@@ -1,5 +1,5 @@
 CC      = gcc
-CFLAGS	= -O0
+CFLAGS	= -O0 -DUNITY_USE_COMMAND_LINE_ARGS
 WFLAGS	= -std=c11 -Wall -Wextra -g
 LDFLAGS	= -lm
 
@@ -13,6 +13,9 @@ viz: viz.o $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS) -lGL -lGLU -lglut
 
 tiny_md: tiny_md.o $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
+
+test_core: test_core.o unity.o $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c
