@@ -3,3 +3,4 @@ viz
 *.o
 .depend
 *.xyz
+test_core
