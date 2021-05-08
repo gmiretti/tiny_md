@@ -1,0 +1,13 @@
+# started on Thu May  6 13:29:10 2021
+
+45654.28,msec,task-clock,0.13%,45654280566,100.00,0.998,CPUs utilized
+4072,,context-switches,3.02%,45654280566,100.00,0.089,K/sec
+3,,cpu-migrations,33.07%,45654280566,100.00,0.000,K/sec
+77,,page-faults,1.14%,45654280566,100.00,0.002,K/sec
+108973649246,,cycles,0.14%,38060889313,83.33,2.387,GHz
+55340075299,,stalled-cycles-frontend,0.21%,38064191978,83.34,50.78,frontend cycles idle
+15026137571,,stalled-cycles-backend,0.95%,30443262773,66.65,13.79,backend cycles idle
+117357410524,,instructions,0.00%,38058363278,83.33,1.08,insn per cycle
+,,,,,0.47,stalled cycles per insn
+14525990812,,branches,0.02%,38064949176,83.34,318.174,M/sec
+617965979,,branch-misses,0.31%,38059620472,83.33,4.25,of all branches
