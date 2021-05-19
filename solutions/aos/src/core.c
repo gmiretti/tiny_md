@@ -22,30 +22,18 @@ void init_pos(struct aos* rxyz, const double rho)
                 rxyz[idx].x = i * a; // x
                 rxyz[idx].y = j * a; // y
                 rxyz[idx].z = k * a; // z
-                // rxyz[idx + 0] = i * a; // x
-                // rxyz[idx + 1] = j * a; // y
-                // rxyz[idx + 2] = k * a; // z
                     // del mismo átomo
                 rxyz[idx + 1].x = (i + 0.5) * a;
                 rxyz[idx + 1].y = (j + 0.5) * a;
                 rxyz[idx + 1].z = k * a;
-                // rxyz[idx + 3] = (i + 0.5) * a;
-                // rxyz[idx + 4] = (j + 0.5) * a;
-                // rxyz[idx + 5] = k * a;
 
                 rxyz[idx + 2].x = (i + 0.5) * a;
                 rxyz[idx + 2].y = j * a;
                 rxyz[idx + 2].z = (k + 0.5) * a;
-                // rxyz[idx + 6] = (i + 0.5) * a;
-                // rxyz[idx + 7] = j * a;
-                // rxyz[idx + 8] = (k + 0.5) * a;
 
                 rxyz[idx + 3].x = i * a;
                 rxyz[idx + 3].y = (j + 0.5) * a;
                 rxyz[idx + 3].z = (k + 0.5) * a;
-                // rxyz[idx + 9] = i * a;
-                // rxyz[idx + 10] = (j + 0.5) * a;
-                // rxyz[idx + 11] = (k + 0.5) * a;
 
                 idx += 4;
             }

@@ -27,10 +27,7 @@ int main()
     // Esto ocupa el tamaño de struct, que es 3 doubles, * tamaño del arreglo que es N
     // así que da igual que con la matriz
 
-    // struct aos rxyz[N];
-    // struct aos vxyz[N];
-    // struct aos fxyz[N];
-    // pide memoria-checkear el 3*N para aos
+    // pide memoria
     // rxyz = (double*)malloc(3 * N * sizeof(double));
     // vxyz = (double*)malloc(3 * N * sizeof(double));
     // fxyz = (double*)malloc(3 * N * sizeof(double));
