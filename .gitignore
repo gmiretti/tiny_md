@@ -1,6 +1,9 @@
 tiny_md
 viz
 *.o
-.depend
+.depend*
 *.xyz
 test_core
+*_ispc.h
+vtune*/
+advisor*/
